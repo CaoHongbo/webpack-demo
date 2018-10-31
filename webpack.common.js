@@ -22,7 +22,7 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader'
         }
       }
     ]
@@ -34,15 +34,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Output Management'
     })
-  ],
-  // 只可以用在开发环境，不要用于生产
-  // source map
-  devtool: 'inline-source-map',
-  // 本地开发服务器 server，可以自动重新build重新启动服务器
-  devServer: {
-    contentBase: './dist'
-  }
-  // 只可以用在开发环境，不要用于生产
+  ]
 };
 
 /** Q&A */

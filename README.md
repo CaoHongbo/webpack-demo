@@ -10,3 +10,9 @@
 $ npm install --save-dev @babel/cli @babel/preset-env @babel/core babel-loader
 $ npm install --save @babel/polyfill
 ```
+
+#### 生产环境构建
+- 使用 webpack-merge 拆解出共同的配置，并合并不同环境的配置
+```shell
+$ npm install --save-dev webpack-merge
+```
