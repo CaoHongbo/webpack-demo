@@ -1,9 +1,9 @@
 // webpack 支持 import/export 写法
 import '@babel/polyfill';
 import _ from 'lodash';
+import axios from 'axios';
 import './style.css';
 import printMe from './print.js';
-import axios from 'axios';
 
 const component = () => {
   const element = document.createElement('div');
@@ -21,11 +21,3 @@ const component = () => {
 };
 
 document.body.appendChild(component());
-
-// babel test
-const arr = Array.from([1, 2, 3]);
-console.log(arr);
-(async () => {
-  await axios.get('http://www.baidu.com');
-})();
-// babel test
