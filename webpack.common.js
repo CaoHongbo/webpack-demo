@@ -5,13 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   // entry: './src/index.js',
   entry: {
-    app: './src/index.js',
-    print: './src/print.js'
+    app: './src/index.js'
+    // print: './src/print.js'
   },
+
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+
   module: {
     rules: [
       {
@@ -27,6 +29,7 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
     // 每次 build 前清理 dist 文件夹，此举可以把之前冗余的文件或没用的文件删除
     new CleanWebpackPlugin(['dist']),
