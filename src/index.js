@@ -20,12 +20,18 @@ const component = () => {
   return element;
 };
 
-document.body.appendChild(component());
+let element = component();
+document.body.appendChild(element);
 
 /** 热模块替换 ./print.js改变时不需要重启即可实现热替换，但不能是入口文件且被当前模块引用，否则webpack-dev-server会重新启动服务器，HMR不起作用 */
 /** 热模块替换不能用于生产环境  */
 if (process.env.NODE_ENV !== 'production') {
   if (module.hot) {
-    module.hot.accept('./print.js' /* , () => {} */);
+    module.hot.accept('./print.js', () => {
+      // 因为 onclick 绑定的是旧的 printMe，所以这个地方处理一下
+      document.body.removeChild(element);
+      element = component(); // Re-render the "component" to update the click handler
+      document.body.appendChild(element);
+    });
   }
 }
