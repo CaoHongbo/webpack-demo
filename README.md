@@ -1,4 +1,4 @@
-# Webpack Demo
+# Webpack4 Demo
 
 #### Babel
 - Babel 版本：v7
@@ -15,8 +15,17 @@ $ npm install --save @babel/polyfill
 ```shell
 $ npm install --save-dev webpack-merge
 ```
+- 配置文件里面的 `mode` 可以指定 `process.env.NODE_ENV`，所以 `/src` 文件夹下面的文件和第三方lib可以根据mode指定的环境来执行，但是 wepack 里面的配置文件不可用
+- webpack4 自动配置了 DefinePlugin
+
+#### tree shaking
+- Use ES2015 module syntax (i.e. import and export).
+- Ensure no compilers transform your ES2015 module syntax into CommonJS modules (this is the default behavior of popular Babel preset @babel/preset-env - see documentation for more details).
+- Add a "sideEffects" property to your project's package.json file.
+- webpack4 mode 设置成 production 自动使用UglifyJSPlugin 进行 minification and tree shaking.
 
 #### webpack CLI
 - --watch 观察者模式
 - --colors 显示颜色
 - --progress 显示进度
+- --optimize-minimize 启用 UglifyJSPlugin

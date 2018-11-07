@@ -43,4 +43,5 @@ module.exports = {
 /** Q&A */
 /**
  * Q1：为什么入口要分离，而不是都整合到同一个文件中
+ * Q2: package.jon sideEffects
  */

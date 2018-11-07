@@ -5,6 +5,9 @@ import _ from 'lodash';
 import './style.css';
 import printMe from './print';
 
+// 下面这行代码可以测试 mode
+// console.log(process.env.NODE_ENV);
+
 const component = () => {
   const element = document.createElement('div');
   const btn = document.createElement('button');
