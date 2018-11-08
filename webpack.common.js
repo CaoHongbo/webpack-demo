@@ -37,7 +37,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Output Management'
     })
-  ]
+  ],
+
+  // 防止重复 prevent duplication
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 };
 
 /** Q&A */

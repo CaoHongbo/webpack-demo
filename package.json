@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch --colors --config webpack.dev.js",
-    "start": "webpack-dev-server --color --open --config webpack.dev.js",
+    "start": "webpack-dev-server --color --config webpack.dev.js",
     "build": "webpack --colors --config webpack.prod.js"
   },
   "keywords": [],
