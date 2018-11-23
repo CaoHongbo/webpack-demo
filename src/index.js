@@ -4,6 +4,8 @@ import _ from 'lodash';
 // import axios from 'axios';
 import './style.css';
 import printMe from './print';
+// import $ from './lib/jquery-3.2.1.min';
+// import amd from './lib/amd';
 
 // 下面这行代码可以测试 mode
 // console.log(process.env.NODE_ENV);

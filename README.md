@@ -1,5 +1,11 @@
 # Webpack4 Demo
 
+#### install
+```shell
+$ npm install --save-dev webpack
+$ npm install --save-dev webpack-cli
+```
+
 #### Babel
 
 - Babel 版本：v7
