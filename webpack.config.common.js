@@ -17,8 +17,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'] // style-loader有HMR功能
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader'] // style-loader有HMR功能
       },
       {
         test: /\.m?js$/,

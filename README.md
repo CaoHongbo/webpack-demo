@@ -50,3 +50,9 @@ $ npm install --save-dev webpack-merge
 - Prefetching/Preloading modules
 - bundle 分析(bundle analysis)
 - 懒加载
+
+#### LESS
+```sell
+$ npm install less
+$ npm install --save-dev less-loader style-loader css-loader
+```
