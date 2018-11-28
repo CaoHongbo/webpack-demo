@@ -52,7 +52,7 @@ $ npm install --save-dev webpack-merge
 - 懒加载
 
 #### LESS
-```sell
+```shell
 $ npm install less
 $ npm install --save-dev less-loader style-loader css-loader
 ```
