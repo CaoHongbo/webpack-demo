@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   // entry: './src/index.js',
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
+    dynimports: './src/dynimports.js',
     // print: './src/print.js'
   },
 
@@ -18,11 +19,12 @@ module.exports = {
     rules: [
       {
         test: /\.less$/,
+        include: path.resolve(__dirname, './src/style'), // include 加快构建速度
         use: ['style-loader', 'css-loader', 'less-loader'] // style-loader有HMR功能
       },
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        include: path.resolve(__dirname, './src'),
         use: {
           loader: 'babel-loader'
         }
@@ -41,10 +43,10 @@ module.exports = {
 
   // 防止重复 prevent duplication
   optimization: {
-    runtimeChunk: 'single',
-    splitChunks: {
-      chunks: 'all'
-    }
+    // runtimeChunk: 'single',
+    // splitChunks: {
+    //   chunks: 'all'
+    // }
   }
 };
 

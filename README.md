@@ -56,3 +56,11 @@ $ npm install --save-dev webpack-merge
 $ npm install less
 $ npm install --save-dev less-loader style-loader css-loader
 ```
+
+#### eslint
+```shell
+npm install eslint-import-resolver-webpack --save-dev
+```
+
+#### 高性能构建
+- loaders 加入 include
